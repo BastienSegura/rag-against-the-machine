@@ -35,9 +35,10 @@ Pour ce POC, nous ne visons pas l'exhaustivité mais la **représentativité**.
 
 * **Domaine thématique :** L'apprentissage supervisé en Machine Learning (ML). C'est un sujet riche en terminologie spécifique, idéal pour tester la capacité du système à gérer un vocabulaire pointu.
 * **Volume cible :** Entre 10 et 50 documents (PDF). C'est suffisant pour tester la pertinence sans saturer les capacités de calcul locales durant les tests.
-* **Nature des fichiers :** * Articles scientifiques (format double colonne, souvent complexe pour l'extraction).
-* Rapports techniques (format texte riche).
-* Un fichier `.bib` (pour les métadonnées structurées). data/supervised-learning.bib
+* **Nature des fichiers :**
+    * Articles scientifiques (format double colonne, souvent complexe pour l'extraction).
+    * Rapports techniques (format texte riche).
+    * Un fichier `.bib` (pour les métadonnées structurées). data/supervised-learning.bib
 * **Source des données :** Utilisation de bases ouvertes comme arXiv, HAL, ou des rapports techniques publics.
 * **Objectif de test :** Vérifier si le RAG arrive à distinguer des concepts proches mais différents (ex: Ridge vs Lasso regression) en se basant sur les documents fournis.
 
@@ -68,6 +69,30 @@ Tout sera installé sur ma machine locale (Windows avec WSL2) pour simuler un en
 
 * **Performance matérielle :** Si votre machine n'a pas de carte graphique (GPU) dédiée, la réponse de l'IA sera un peu lente (quelques secondes par phrase). C'est acceptable pour un prototype.
 * **Poids des modèles :** Il faudra télécharger environ 5Go de modèles au début du sprint.
+
+### 2.4. Philosophie de l'Architecture
+
+L'architecture doit rester **modulaire** afin de pouvoir évoluer facilement. Chaque composant (LLM, VectorDB, Interface) doit pouvoir être remplacé par une alternative plus robuste dans une version future sans réécrire tout le code.
+
+### 2.5. Architecture des fichiers
+### Project Structure
+
+```text
+rag-poc/
+├── data/                   # Raw data (PDF + supervised-learning.bib)
+├── storage/                # Local persistence of ChromaDB (generated)
+├── src/
+│   ├── __init__.py
+│   ├── config.py           # Central configuration (models, paths, hyperparameters)
+│   ├── loader.py           # Extraction logic (PDF + BibTeX Mapping)
+│   ├── indexer.py          # Vectorization and storage logic (Embedding + ChromaDB)
+│   ├── engine.py           # RAG logic (Query Engine, Prompts)
+│   └── utils.py            # Helper functions (text cleaning, citation formatting)
+├── app.py                  # Streamlit Interface (UI)
+├── .env                    # Environment variables (if needed)
+└── requirements.txt        # Dependencies (LlamaIndex, Ollama, Streamlit)
+```
+
 
 ## 3. Périmètre Strict (Strict Scope) - MVP 48H
 

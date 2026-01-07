@@ -9,7 +9,9 @@
 
 * **effect of WSL on performance :** There is a slight performance hit when using WSL compared to a native Linux install. (up to 10%)
 * **How to see if Ollama's server is running :** `curl http://localhost:11434` or `ollama list`
+* **purpose of a .bib file :** It will act as the proof of what the llm answered from. It's a really important part of the RAG systems.
 * **Easy way of building a .bib file :** Google Scholar -> "Cite" -> "BibTeX"
+* **Difference between structured and unstructured data :** .pdf are unstructured, while .bib files are structured.
 
 ### Packages Install to interact with Ollama's server through Python
 

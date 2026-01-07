@@ -31,4 +31,7 @@ python3 -m venv venv
 
 # Activer l'environnement
 source venv/bin/activate
+
+# bibtexparser pour manipuler les fichiers .bib
+pip install bibtexparser
 ```
