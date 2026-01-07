@@ -57,10 +57,6 @@ Ne fermez pas la porte, ouvrez-la sur la suite.
 * **Ce qu'il manque :** Admettez honnêtement les limites actuelles (parsing des tableaux, gestion de volumes massifs).
 * **La Vision :** Concluez sur la puissance du RAG local comme outil de souveraineté numérique pour les organisations.
 
----
+## 8. Notes Techniques & Ressources
 
-### Mon conseil pour votre rédaction :
-
-Utilisez le **"Je"** pour rendre l'article humain. Au lieu de dire *"Le système a été installé"*, dites *"J'ai lancé le téléchargement des 5Go de Llama 3 à H+2, l'adrénaline commençait à monter"*.
-
-Souhaitez-vous que nous travaillions sur **l'accroche spécifique (le "Hook")** de votre introduction pour qu'elle soit vraiment percutante dès les premières lignes ?
+* **Great video about RAG architecture :** https://www.youtube.com/watch?v=fB2JQXEH_94

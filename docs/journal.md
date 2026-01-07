@@ -4,6 +4,7 @@
 
 * **open-weight models :** Machine learning models whose architecture and weights are publicly available, allowing for local deployment without reliance on external APIs.
 * **DOI :** Digital Object Identifier. Used to uniquely identify academic documents.
+* **Embedding :** A numerical representation of text that captures its semantic meaning, enabling efficient similarity searches and retrieval.
 
 ## Free notes
 
@@ -26,3 +27,4 @@
 * **day1-10:26** - Wrote a simple python script to interact with Ollama's server using the llama_index.llms.ollama module
 * **day1-10:39** - Building the data corpus. Downloaded 10 research papers (PDF) and a BibTeX file on supervised learning in ML from arXiv.
 * **day1-11:25** - The corpus is ready. Now I'm preparing the .bib file to extract metadata.
+* **day1-17:43** - Wrote loader.py and config.py to load and parse the documents and metadata. Testing...

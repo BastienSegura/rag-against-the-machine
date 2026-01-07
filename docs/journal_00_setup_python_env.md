@@ -34,4 +34,10 @@ source venv/bin/activate
 
 # bibtexparser pour manipuler les fichiers .bib
 pip install bibtexparser
+
+# llama-index pour interagir avec Ollama
+pip install llama-index-core llama-index-llms-ollama llama-index-embeddings-ollama
+
+# Example to run the loader script
+(.venv-rag) XXXXXX@XXXXXXX:~/myProjects/rag-poc$ python3 -m src.loader
 ```
