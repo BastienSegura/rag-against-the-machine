@@ -1,3 +1,4 @@
 data/*.pdf
 data/tmp/
 .venv-rag/
+src/__pycache__/
