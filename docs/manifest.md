@@ -37,7 +37,7 @@ Pour ce POC, nous ne visons pas l'exhaustivité mais la **représentativité**.
 * **Volume cible :** Entre 10 et 50 documents (PDF). C'est suffisant pour tester la pertinence sans saturer les capacités de calcul locales durant les tests.
 * **Nature des fichiers :** * Articles scientifiques (format double colonne, souvent complexe pour l'extraction).
 * Rapports techniques (format texte riche).
-* Un fichier `.bib` (pour les métadonnées structurées).
+* Un fichier `.bib` (pour les métadonnées structurées). data/supervised-learning.bib
 * **Source des données :** Utilisation de bases ouvertes comme arXiv, HAL, ou des rapports techniques publics.
 * **Objectif de test :** Vérifier si le RAG arrive à distinguer des concepts proches mais différents (ex: Ridge vs Lasso regression) en se basant sur les documents fournis.
 
@@ -45,6 +45,7 @@ Pour ce POC, nous ne visons pas l'exhaustivité mais la **représentativité**.
 ## 2. Architecture & Stack Technique (Version On-Premise Ready)
 
 Pour ce sprint, nous allons pivoter vers une stack **100% locale** mais extrêmement simple à mettre en œuvre.
+Tout sera installé sur ma machine locale (Windows avec WSL2) pour simuler un environnement "On-Premise".
 
 ### 2.1. Le choix des outils "Commando Local"
 
