@@ -1,0 +1,20 @@
+# PDF processing
+pypdf
+
+# BibTeX parsing
+bibtexparser
+
+# LlamaIndex core
+llama-index
+llama-index-core
+
+# Vector store integration
+chromadb
+llama-index-vector-stores-chroma
+
+# Embeddings
+llama-index-embeddings-huggingface
+sentence-transformers
+
+# LLM integration (Ollama)
+llama-index-llms-ollama
