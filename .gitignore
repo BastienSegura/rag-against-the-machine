@@ -1,4 +1,9 @@
+.venv-rag/
+
+# chromadb database is ignored
+storage/
+
 data/*.pdf
 data/tmp/
-.venv-rag/
+
 src/__pycache__/
