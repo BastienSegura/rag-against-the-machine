@@ -76,22 +76,3 @@ def load_documents(data_path: Path = DATA_DIR) -> List[Document]:
             doc.metadata["cite_key"] = cite_key
     
     return documents
-
-
-def get_processed_nodes():
-    """
-    Load documents and split them into nodes using SentenceSplitter.
-    
-    Returns:
-        List of nodes ready for indexing
-    """
-    documents = load_documents()
-    
-    splitter = SentenceSplitter(
-        chunk_size=CHUNK_SIZE,
-        chunk_overlap=CHUNK_OVERLAP,
-    )
-    
-    nodes = splitter.get_nodes_from_documents(documents)
-    
-    return nodes
