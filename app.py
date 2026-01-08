@@ -9,8 +9,8 @@ from src.engine import query, create_query_engine
 
 # --- Page Configuration ---
 st.set_page_config(
-    page_title="RAG JAM - Assistant Bibliographique",
-    page_icon="📚",
+    page_title="ML Assistant",
+    page_icon="",
     layout="wide",
     initial_sidebar_state="expanded"
 )
@@ -29,8 +29,8 @@ if "engine_ready" not in st.session_state:
 
 # --- Sidebar: Sources Panel ---
 with st.sidebar:
-    st.header("📄 Sources")
-    st.caption("Documents utilisés pour la dernière réponse")
+    st.header("Sources")
+    st.caption("Documents used for the last response")
     
     if st.session_state.sources:
         for i, source in enumerate(st.session_state.sources, 1):
@@ -39,44 +39,44 @@ with st.sidebar:
                 metadata = source.get("metadata", {})
                 if metadata:
                     if "cite_key" in metadata:
-                        st.markdown(f"**Clé:** `{metadata['cite_key']}`")
+                        st.markdown(f"**Key:** `{metadata['cite_key']}`")
                     if "title" in metadata:
-                        st.markdown(f"**Titre:** {metadata['title']}")
+                        st.markdown(f"**Title:** {metadata['title']}")
                     if "author" in metadata:
-                        st.markdown(f"**Auteur:** {metadata['author']}")
+                        st.markdown(f"**Author:** {metadata['author']}")
                     if "year" in metadata:
-                        st.markdown(f"**Année:** {metadata['year']}")
+                        st.markdown(f"**Year:** {metadata['year']}")
                     if "file_name" in metadata:
-                        st.markdown(f"**Fichier:** {metadata['file_name']}")
+                        st.markdown(f"**File:** {metadata['file_name']}")
                 
                 st.divider()
-                st.markdown("**Extrait:**")
+                st.markdown("**Excerpt:**")
                 st.text(source["text"])
     else:
-        st.info("Posez une question pour voir les sources utilisées.")
+        st.info("Ask a question to see the sources used.")
     
     st.divider()
     
     # Settings
-    st.header("⚙️ Paramètres")
+    st.header("Parameters")
     top_k = st.slider(
-        "Nombre de sources à récupérer",
+        "Number of sources to retrieve",
         min_value=1,
         max_value=10,
         value=3,
-        help="Plus de sources = réponses plus complètes mais plus lentes"
+        help="More sources = more comprehensive answers but slower"
     )
     
     # Clear conversation button
-    if st.button("🗑️ Effacer la conversation", use_container_width=True):
+    if st.button("Clear conversation", use_container_width=True):
         st.session_state.messages = []
         st.session_state.sources = []
         st.rerun()
 
 
 # --- Main Content ---
-st.title("📚 RAG JAM")
-st.caption("Assistant de recherche bibliographique - Posez vos questions sur les documents indexés")
+st.title("Machine Learning assistant")
+st.caption("Ask your questions about the indexed documents")
 
 # Display chat history
 for message in st.session_state.messages:
@@ -84,7 +84,7 @@ for message in st.session_state.messages:
         st.markdown(message["content"], unsafe_allow_html=True)
 
 # Chat input
-if prompt := st.chat_input("Posez votre question sur la bibliographie..."):
+if prompt := st.chat_input("Ask your question about the bibliography..."):
     # Add user message to history
     st.session_state.messages.append({"role": "user", "content": prompt})
     
@@ -94,7 +94,7 @@ if prompt := st.chat_input("Posez votre question sur la bibliographie..."):
     
     # Generate response
     with st.chat_message("assistant"):
-        with st.spinner("Recherche dans les documents..."):
+        with st.spinner("Searching documents..."):
             try:
                 # Query the RAG engine
                 result = query(prompt, similarity_top_k=top_k)
@@ -124,4 +124,4 @@ if prompt := st.chat_input("Posez votre question sur la bibliographie..."):
 
 # --- Footer ---
 st.divider()
-st.caption("RAG JAM v0.1 | Prototype 48H | Données 100% locales")
+st.caption("RAG JAM v0.1 | Prototype 48H | Data 100% local")
