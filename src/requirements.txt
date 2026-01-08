@@ -1,20 +1,21 @@
-# PDF processing
+# Versions fixes pour éviter la résolution infinie
 pypdf
-
-# BibTeX parsing
 bibtexparser
 
-# LlamaIndex core
-llama-index
-llama-index-core
+# LlamaIndex
+llama-index==0.13.0
+llama-index-core==0.13.0
 
-# Vector store integration
-chromadb
-llama-index-vector-stores-chroma
+# Vector store
+chromadb==0.5.23
+llama-index-vector-stores-chroma==0.4.0
 
-# Embeddings
-llama-index-embeddings-huggingface
-sentence-transformers
+# Embeddings - VERSIONS FIXES
+sentence-transformers==3.0.1
+transformers==4.44.0
+huggingface-hub==0.25.0
+torch>=2.0.0
+llama-index-embeddings-huggingface==0.4.0
 
-# LLM integration (Ollama)
-llama-index-llms-ollama
+# LLM
+llama-index-llms-ollama==0.4.0

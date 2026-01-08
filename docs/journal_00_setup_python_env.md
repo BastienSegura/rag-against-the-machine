@@ -38,6 +38,13 @@ pip install bibtexparser
 # llama-index pour interagir avec Ollama
 pip install llama-index-core llama-index-llms-ollama llama-index-embeddings-ollama
 
+# Chromadb pour la base de données vectorielle
+pip install chromadb
+pip install llama-index-vector-stores-chroma
+
+# Pour utiliser les embeddings Huggingface.
+pip install llama-index-embeddings-huggingface 
+
 # Example to run the loader script
 (.venv-rag) XXXXXX@XXXXXXX:~/myProjects/rag-poc$ python3 -m src.loader
 ```
