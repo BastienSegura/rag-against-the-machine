@@ -53,7 +53,7 @@ def load_documents(data_path: Path = DATA_DIR) -> List[Document]:
         required_exts=[".pdf"],
         recursive=False,
     )
-    documents = reader.load_data()
+    documents = reader.load_data(show_progress=True)
     
     # Enrich each document with BibTeX metadata
     for doc in documents:

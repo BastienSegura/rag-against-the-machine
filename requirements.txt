@@ -1,0 +1,8 @@
+llama-index>=0.10.0
+llama-index-llms-ollama>=0.3.0
+llama-index-vector-stores-chroma
+llama-index-embeddings-huggingface
+chromadb
+bibtexparser
+streamlit
+ollama>=0.4.0
