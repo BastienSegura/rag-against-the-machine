@@ -28,3 +28,4 @@
 * **day1-10:39** - Building the data corpus. Downloaded 10 research papers (PDF) and a BibTeX file on supervised learning in ML from arXiv.
 * **day1-11:25** - The corpus is ready. Now I'm preparing the .bib file to extract metadata.
 * **day1-17:43** - Wrote loader.py and config.py to load and parse the documents and metadata. Testing...
+* **day2-16:07** - Testing the engine with some questions. The RAG system seems to work well. But the page numbers in the answers are off.
