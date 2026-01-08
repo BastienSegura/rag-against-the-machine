@@ -53,8 +53,8 @@ Tout sera installé sur ma machine locale (Windows avec WSL2) pour simuler un en
 | Composant | Outil Sélectionné | Pourquoi ce choix ? |
 | --- | --- | --- |
 | **Serveur d'Inférence** | **Ollama** | C'est le "Docker" des LLM. Il permet de faire tourner Llama 3 ou Mistral en local avec une simplicité déconcertante. Indispensable pour du On-Premise. |
-| **LLM (Le cerveau)** | **Llama 3 (8B) ou Mistral** | Modèles légers, performants, capables de tourner sur un PC portable avec 16Go de RAM. |
-| **Embedding** | **FastEmbed** ou **Ollama** | Permet de transformer vos textes en vecteurs localement sans envoyer de données à l'extérieur. |
+| **LLM (Le cerveau)** | **Llama 3 (8B)** | Modèle léger, performant, capable de tourner sur un PC portable avec 16Go de RAM. (mon WSL2 a 24Go alloué.) |
+| **Embedding** | **FastEmbed**| Permet de transformer vos textes en vecteurs localement sans envoyer de données à l'extérieur. |
 | **Vector DB** | **ChromaDB** | Base de données "In-memory" ou stockée dans un simple dossier local. Pas de serveur à gérer. |
 | **Orchestrateur** | **LlamaIndex** | Très efficace pour la gestion des PDF/BibTeX et parfaitement compatible avec Ollama. |
 | **Interface** | **Streamlit** | Pour garder la rapidité de développement de l'UI. |

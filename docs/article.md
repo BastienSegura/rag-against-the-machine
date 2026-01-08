@@ -60,3 +60,7 @@ Ne fermez pas la porte, ouvrez-la sur la suite.
 ## 8. Notes Techniques & Ressources
 
 * **Great video about RAG architecture :** https://www.youtube.com/watch?v=fB2JQXEH_94
+
+* **Liste d'idée d'améliorations**
+    * Durant la phase de load, transformer les documents en markdown pour mieux gérer les tableaux et formules.
+    * Creuser la raison pour laquelle le moteur refuse de répondre dans la langue de la question posée.

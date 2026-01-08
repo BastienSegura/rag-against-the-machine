@@ -29,3 +29,5 @@
 * **day1-11:25** - The corpus is ready. Now I'm preparing the .bib file to extract metadata.
 * **day1-17:43** - Wrote loader.py and config.py to load and parse the documents and metadata. Testing...
 * **day2-16:07** - Testing the engine with some questions. The RAG system seems to work well. But the page numbers in the answers are off.
+* **day2-22:07** - Developped a light version of the UI using Streamlit to interact with the RAG system.
+* **day2-22:40** - Trying to modify the engine to see the effect on the answers.
